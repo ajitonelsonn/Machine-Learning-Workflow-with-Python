@@ -31,138 +31,118 @@ most of these books share the following steps (checklist):
 ## 2-1 Real world Application Vs Competitions
 <img src="http://s9.picofile.com/file/8339956300/reallife.png" height="400" width="300" />
 <a id="3"></a> <br>
-# 3- Problem Definition
+## 3- Problem Definition
 I think one of the important things when you start a new machine learning project is Defining your problem. that means you should understand business problem.( **Problem Formalization**)
 
 Problem Definition has four steps that have illustrated in the picture below:
-<img src="http://s8.picofile.com/file/8338227734/ProblemDefination.png">
-<a id="4"></a> <br>
-### 3-1 Problem Feature
-we will use the classic Iris data set. This dataset contains information about three different types of Iris flowers:
+<img src="http://s8.picofile.com/file/8344103134/Problem_Definition2.png" width=400 height=400>
+## 3-1 Problem Feature
+The sinking of the Titanic is one of the most infamous shipwrecks in history. **On April 15, 1912**, during her maiden voyage, the Titanic sank after colliding with an iceberg, killing **1502 out of 2224** passengers and crew. That's why the name DieTanic. This is a very unforgetable disaster that no one in the world can forget.
 
-* Iris Versicolor
-* Iris Virginica
-* Iris Setosa
+It took about $7.5 million to build the Titanic and it sunk under the ocean due to collision. The Titanic Dataset is a very good dataset for begineers to start a journey in data science and participate in competitions in Kaggle.
 
-The data set contains measurements of four variables :
+ٌWe will use the classic titanic data set. This dataset contains information about **11 different variables**:
+<img src="http://s9.picofile.com/file/8340453092/Titanic_feature.png" height="500" width="500">
 
-* sepal length 
-* sepal width
-* petal length 
-* petal width
- 
-The Iris data set has a number of interesting features:
+1. Survival
+1. Pclass
+1. Name
+1. Sex
+1. Age
+1. SibSp
+1. Parch
+1. Ticket
+1. Fare
+1. Cabin
+1. Embarked
 
-1. One of the classes (Iris Setosa) is linearly separable from the other two. However, the other two classes are not linearly separable.
-
-2. There is some overlap between the Versicolor and Virginica classes, so it is unlikely to achieve a perfect classification rate.
-
-3. There is some redundancy in the four input variables, so it is possible to achieve a good solution with only three of them, or even (with difficulty) from two, but the precise choice of best variables is not obvious.
-
-**Why am I  using this dataset:**
-
-1- This is a good project because it is so well understood.
-
-2- Attributes are numeric so you have to figure out how to load and handle data.
-
-3- It is a classification problem, allowing you to practice with perhaps an easier type of supervised learning algorithm.
-
-4- It is a multi-class classification problem (multi-nominal) that may require some specialized handling.
-
-5- It only has 4 attributes and 150 rows, meaning it is small and easily fits into memory (and a screen or A4 page).
-
-6- All of the numeric attributes are in the same units and the same scale, not requiring any special scaling or transforms to get started.[5]
-
-7- we can define problem as clustering(unsupervised algorithm) project too.
-<a id="5"></a> <br>
+> <font color="red"><b>Note :</b></font>
+You must answer the following question:
+How does your company expact to use and benfit from your model.
 ### 3-2 Aim
-The aim is to classify iris flowers among three species (setosa, versicolor or virginica) from measurements of length and width of sepals and petals
+It is your job to predict if a **passenger** survived the sinking of the Titanic or not.  For each PassengerId in the test set, you must predict a 0 or 1 value for the Survived variable.
 <a id="6"></a> <br>
 ### 3-3 Variables
-The variables are :
-**sepal_length**: Sepal length, in centimeters, used as input.
-**sepal_width**: Sepal width, in centimeters, used as input.
-**petal_length**: Petal length, in centimeters, used as input.
-**petal_width**: Petal width, in centimeters, used as input.
-**setosa**: Iris setosa, true or false, used as target.
-**versicolour**: Iris versicolour, true or false, used as target.
-**virginica**: Iris virginica, true or false, used as target.
 
-**<< Note >>**
-> You must answer the following question:
-How does your company expact to use and benfit from your model.
-<a id="7"></a> <br>
-# 4- Inputs & Outputs
-<a id="8"></a> <br>
+1. **Age** :
+    1. Age is fractional if less than 1. If the age is estimated, is it in the form of xx.5
+
+1. **Sibsp** :
+    1. The dataset defines family relations in this way...
+
+        a. Sibling = brother, sister, stepbrother, stepsister
+
+        b. Spouse = husband, wife (mistresses and fiancés were ignored)
+
+1. **Parch**:
+    1. The dataset defines family relations in this way...
+
+        a. Parent = mother, father
+
+        b. Child = daughter, son, stepdaughter, stepson
+
+        c. Some children travelled only with a nanny, therefore parch=0 for them.
+
+1. **Pclass** :
+    *  A proxy for socio-economic status (SES)
+        * 1st = Upper
+        * 2nd = Middle
+        * 3rd = Lower
+1. **Embarked** :
+     * nominal datatype 
+1. **Name**: 
+    * nominal datatype . It could be used in feature engineering to derive the gender from title
+1. **Sex**: 
+   * nominal datatype 
+1. **Ticket**:
+    * that have no impact on the outcome variable. Thus, they will be excluded from analysis
+1. **Cabin**: 
+    * is a nominal datatype that can be used in feature engineering
+1.  **Fare**:
+    * Indicating the fare
+1. **PassengerID**:
+    * have no impact on the outcome variable. Thus, it will be excluded from analysis
+1. **Survival**:
+    * **[dependent variable](http://www.dailysmarty.com/posts/difference-between-independent-and-dependent-variables-in-machine-learning)** , 0 or 1
+## 4- Inputs & Outputs
+<a id="41"></a> <br>
 ### 4-1 Inputs
-**Iris** is a very popular **classification** and **clustering** problem in machine learning and it is such as "Hello world" program when you start learning a new programming language. then I decided to apply Iris on  20 machine learning method on it.
-The Iris flower data set or Fisher's Iris data set is a **multivariate data set** introduced by the British statistician and biologist Ronald Fisher in his 1936 paper The use of multiple measurements in taxonomic problems as an example of linear discriminant analysis. It is sometimes called Anderson's Iris data set because Edgar Anderson collected the data to quantify the morphologic variation of Iris flowers in three related species. Two of the three species were collected in the Gaspé Peninsula "all from the same pasture, and picked on the same day and measured at the same time by the same person with the same apparatus".
-The data set consists of 50 samples from each of three species of Iris (Iris setosa, Iris virginica, and Iris versicolor). Four features were measured from each sample: the length and the width of the sepals and petals, in centimeters. Based on the combination of these four features, Fisher developed a linear discriminant model to distinguish the species from each other.
-
-As a result, **iris dataset is used as the input of all algorithms**.
-![iris](https://image.ibb.co/gbH3ue/iris.png)
-[image source](https://rpubs.com/wjholst/322258)
-<a id="9"></a> <br>
+What's our input for this problem:
+    1. train.csv
+    1. test.csv
+<a id="42"></a> <br>
 ### 4-2 Outputs
-the outputs for our algorithms totally depend on the type of classification or clustering algorithms.
-the outputs can be the number of clusters or predict for new input.
+1. Your score is the percentage of passengers you correctly predict. This is known simply as "**accuracy**”.
 
-**setosa**: Iris setosa, true or false, used as target.
-**versicolour**: Iris versicolour, true or false, used as target.
-**virginica**: Iris virginica, true or false, used as a target.
-<a id="10"></a> <br>
-# 5-Installation
-#### Windows:
-* Anaconda (from https://www.continuum.io) is a free Python distribution for SciPy stack. It is also available for Linux and Mac.
-* Canopy (https://www.enthought.com/products/canopy/) is available as free as well as commercial distribution with full SciPy stack for Windows, Linux and Mac.
-* Python (x,y) is a free Python distribution with SciPy stack and Spyder IDE for Windows OS. (Downloadable from http://python-xy.github.io/)
-#### Linux
-Package managers of respective Linux distributions are used to install one or more packages in SciPy stack.
 
-For Ubuntu Users:
-sudo apt-get install python-numpy python-scipy python-matplotlibipythonipythonnotebook
-python-pandas python-sympy python-nose
-<a id="11"></a> <br>
-## 5-1 Jupyter notebook
-I strongly recommend installing **Python** and **Jupyter** using the **[Anaconda Distribution](https://www.anaconda.com/download/)**, which includes Python, the Jupyter Notebook, and other commonly used packages for scientific computing and data science.
+The Outputs should have exactly **2 columns**:
 
-First, download Anaconda. We recommend downloading Anaconda’s latest Python 3 version.
-
-Second, install the version of Anaconda which you downloaded, following the instructions on the download page.
-
-Congratulations, you have installed Jupyter Notebook! To run the notebook, run the following command at the Terminal (Mac/Linux) or Command Prompt (Windows):
-<a id="15"></a> <br>
-## 5-5 Loading Packages
-
+    1. PassengerId (sorted in any order)
+    1. Survived (contains your binary predictions: 1 for survived, 0 for deceased)
+## 5- Loading Packages
 In this kernel we are using the following packages:
-
- <img src="http://s8.picofile.com/file/8338227868/packages.png">
- 
- Now we import all of them 
- 
-<a id="16"></a> <br>
+ <img src="http://s8.picofile.com/file/8338227868/packages.png" width=400  height=400>
 # 6- Exploratory Data Analysis(EDA)
  In this section, you'll learn how to use graphical and numerical techniques to begin uncovering the structure of your data. 
  
 * Which variables suggest interesting relationships?
 * Which observations are unusual?
+* Analysis of the features!
 
-By the end of the section, you'll be able to answer these questions and more, while generating graphics that are both insightful and beautiful.  then We will review analytical and statistical operations:
+By the end of the section, you'll be able to answer these questions and more, while generating graphics that are both **insightful** and **beautiful**.  then We will review analytical and statistical operations:
 
 *   5-1 Data Collection
 *   5-2 Visualization
 *   5-3 Data Preprocessing
 *   5-4 Data Cleaning
 <img src="http://s9.picofile.com/file/8338476134/EDA.png">
-<a id="17"></a> <br>
+
+ ><font color="red"><b>Note:</b></font>
+ You can change the order of the above steps.
 ## 6-1 Data Collection
 **Data collection** is the process of gathering and measuring data, information or any variables of interest in a standardized and established manner that enables the collector to answer or test hypothesis and evaluate outcomes of the particular collection.[techopedia]
-
-**Iris dataset**  consists of 3 different types of irises’ (Setosa, Versicolour, and Virginica) petal and sepal length, stored in a 150x4 numpy.ndarray
-
-The rows being the samples and the columns being: Sepal Length, Sepal Width, Petal Length and Petal Width.[6]
-
-<a id="18"></a> <br>
+<br>
+I start Collection Data by the training and testing datasets into Pandas DataFrames
 ## 6-2 Visualization
 **Data visualization**  is the presentation of data in a pictorial or graphical format. It enables decision makers to see analytics presented visually, so they can grasp difficult concepts or identify new patterns.
 
