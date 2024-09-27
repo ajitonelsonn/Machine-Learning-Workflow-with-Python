@@ -167,9 +167,8 @@ mohamadjavad.bahmani@gmail.com
  **Have Fun!**
  
 you can follow me on:
-> ###### [ GitHub](https://github.com/mjbahmani)
-> ###### [LinkedIn](https://www.linkedin.com/in/bahmani/)
-> ###### [Kaggle](https://www.kaggle.com/mjbahmani/)
+> ###### [ GitHub](https://github.com/ajitonelsonn)
+> ###### [LinkedIn](https://www.linkedin.com/in/ajitonelson/)
 
  
  ## Please Fork the Repository to continue...
