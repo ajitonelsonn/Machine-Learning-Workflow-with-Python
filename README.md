@@ -165,10 +165,7 @@ To use the **correct data**, please **download** the dat set from  the **Kaggle*
 mohamadjavad.bahmani@gmail.com
 
  **Have Fun!**
- 
-you can follow me on:
-> ###### [ GitHub](https://github.com/ajitonelsonn)
-> ###### [LinkedIn](https://www.linkedin.com/in/ajitonelson/)
+
 
  
  ## Please Fork the Repository to continue...
